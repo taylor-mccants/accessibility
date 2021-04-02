@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-light">
-    <div class="container-fluid d-none d-lg-block my-4 header">
+    <header class="container-fluid d-none d-lg-block my-4 header" role="banner">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
@@ -33,9 +33,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="container-fluid bg-dark nav">
+    <nav class="container-fluid bg-dark nav" role="navigation">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
@@ -117,74 +117,74 @@
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="container main" id="main">
+    <main class="container main" id="main" role="main">
         <div class="row no-gutters">
-            <div class="col-12 col-md-5 mt-4 login">
-                <div class="p-4 mr-md-3 bg-white">
-                    <div class="text-primary mb-4 title">Login</div>
-                    <div class="text-danger mb-4 d-none subtitle" id="login-error">Please correct the error(s)</div>
+            <section class="col-12 col-md-5 mt-4 login" aria-label="Login Form">
+                <fieldset class="p-4 mr-md-3 bg-white">
+                    <legend class="text-primary mb-4 title">Login</legend>
+                    <div class="text-danger mb-4 d-none subtitle" id="login-error" aria-live="assertive"></div>
                     <ul class="sr-only" id="login-error-list"></ul>
                     <form id="login-form" novalidate>
                         <div class="form-group">
-                            <input class="form-control" id="login-email-control" type="email" placeholder="Email" required style="position: relative; top: 10px;">
-                            <p style="position: relative; top: -60px;">Email</p>
+                            <label for="login-email-control">Email</label>
+                            <input class="form-control" id="login-email-control" type="email" placeholder="Email" required aria-label="Email" aria-required="true">
                             <small class="invalid-feedback"></small>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" id="login-password-control" type="password" placeholder="Password" style="position: relative; top: 10px;">
-                            <p style="position: relative; top: -60px;">Password</p>
+                            <label for="login-password-control">Password</label>
+                            <input class="form-control" id="login-password-control" type="password" placeholder="Password" aria-label="Password">
                             <small class="invalid-feedback"></small>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control">
-                                <label class="form-check-label">Keep me logged in</label>
+                                <input class="form-check-input" type="checkbox" value="remember" id="login-remember-control" aria-checked="false">
+                                <label for="login-remember-control" class="form-check-label">Keep me logged in</label>
                             </div>
                         </div>
                         <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
-                        <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button">Forgot password</button>
+                        <button class="btn btn-link ml-3" id="login-forgot-button" type="button">Forgot password</button>
                     </form>
-                </div>
-            </div>
+                </fieldset>
+            </section>
 
-            <div class="col-12 col-md-7 mt-4 register">
-                <div class="p-4 bg-white">
-                    <div class="text-primary mb-4 title">Create new account</div>
-                    <div class="text-danger mb-4 d-none subtitle" id="register-error">Please correct the error(s)</div>
+            <section class="col-12 col-md-7 mt-4 register" aria-label="Register Form">
+                <fieldset class="p-4 bg-white">
+                    <legend class="text-primary mb-4 title">Create new account</legend>
+                    <div class="text-danger mb-4 d-none subtitle" id="register-error" aria-live="assertive"></div>
                     <ul class="sr-only" id="register-error-list"></ul>
                     <form id="register-form" novalidate>
-                        <div class="form-group">
-                            <p class="form-label" id="register-basic-legend">Basic information
+                        <fieldset class="form-group">
+                            <legend class="form-label" id="register-basic-legend">Basic information
                                 <small class="text-secondary">(optional)</small>
-                            </p>
+                            </legend>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-6">
-                                    <p>First name</p>
-                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required>
+                                    <label for="register-first-name-control">First name</label>
+                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required aria-required="true">
                                     <small class="invalid-feedback"></small>
                                 </div>
                                 <div class="form-group col-12 col-lg-6">
-                                    <p>Last name</p>
-                                    <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required>
+                                    <label for="register-last-name-control">Last name</label>
+                                    <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required aria-required="true">
                                     <small class="invalid-feedback"></small>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <p>Email</p>
-                                <input class="form-control" id="register-email-control" type="email" placeholder="Email" required>
+                                <label for="register-email-control">Email</label>
+                                <input class="form-control" id="register-email-control" type="email" placeholder="Email" required aria-required="true">
                                 <small class="invalid-feedback"></small>
                             </div>
                             <div class="form-group">
-                                <p>Password</p>
-                                <input class="form-control" id="register-password-control" type="password" placeholder="Password" required>
+                                <label for="register-password-control">Password</label>
+                                <input class="form-control" id="register-password-control" type="password" placeholder="Password" required aria-required="true">
                                 <small class="invalid-feedback"></small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
-                                <p>Programme</p>
-                                <select class="form-control" id="register-programme-control" required>
+                                <label for="register-programme-control">Programme</label>
+                                <select class="form-control" id="register-programme-control" required  aria-required="true" aria-haspopup="true">
                                     <option value="">Please select your education or research programme</option>
                                     <option value="bachelor">Bachelor</option>
                                     <option value="master">Master</option>
@@ -193,38 +193,38 @@
                                 </select>
                                 <small class="invalid-feedback"></small>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <p class="form-label" id="register-address-legend">Additional information
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <legend class="form-label" id="register-address-legend">Additional information
                                 <small class="text-secondary">(optional)</small>
-                            </p>
+                            </legend>
                             <div class="form-group">
-                                <p>Street</p>
+                                <label for="register-street-control">Street</label>
                                 <input class="form-control" id="register-street-control" type="text" placeholder="Street">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-5">
-                                    <p>City</p>
+                                    <label for="register-city-control">City</label>
                                     <input class="form-control" id="register-city-control" type="text" placeholder="City">
                                 </div>
                                 <div class="form-group col-12 col-lg-4">
-                                    <p>State</p>
+                                    <label for="register-state-control">State</label>
                                     <input class="form-control" id="register-state-control" type="text" placeholder="State">
                                 </div>
                                 <div class="form-group col-12 col-lg-3">
-                                    <p>Zip</p>
+                                    <label for="register-zip-control">Zip</label>
                                     <input class="form-control" id="register-zip-control" type="text" placeholder="Zip">
                                 </div>
                             </div>
-                        </div>
+                        </fieldset>
                         <button class="btn btn-primary" id="register-register-button">Register</button>
                     </form>
-                </div>
-            </div>
+                </fieldset>
+            </section>
         </div>
-    </div>
+    </main>
 
-    <div class="container-fluid bg-dark mt-4 footer">
+    <footer class="container-fluid bg-dark mt-4 footer" role="contentinfo">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
@@ -234,7 +234,7 @@
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a>
             </div>
         </div>
-    </div>
+    </footer>
 
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
