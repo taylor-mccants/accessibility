@@ -1,7 +1,7 @@
 # accessibility
 
 
-## Exercise 2
+## Exercise 2 - Accessible Design
 
 ### Contrast ratio for texts
 
@@ -32,4 +32,21 @@ The font size is dynamically changeable on index.html
 
 ToDo: Aria Support for these buttons
 
+## Exercise 4 – Accessible forms
+
+### Form control labelling
+
+Added label tags for all input controls. Reordered some labels to ensure they are read before the input control.
+
+TODO: Check with screen reader for fluidity and usability.
+
+### Related control grouping
+
+Grouped basic information and additional information in Create New Account section using fieldset and legend. Also grouped login and register forms (may not be necessary)
+
+### Form input validation
+
+Added a function to update error messages according to the specific error. These error messages are clickable and will focus on the corresponding input field. In addition, when any error is present, the general error message will appear. Otherwise, it will be removed.
+
+ToDo: Set up aria-live on all error messages? Change small tag to indicate it is clickable to focus the corresponding input field. Test with screen reader.
 
