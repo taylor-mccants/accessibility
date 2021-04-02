@@ -18,9 +18,18 @@ is accessed by, it's hard to change.
 Identified Page Regions (ARIA roles) for index.html:
 - banner
 - navigation
+- button  
 - main
 - article
 - complementary
 - contentinfo
+
+ToDo: for all the other pages
+
+### Font size 
+
+The font size is dynamically changeable on index.html
+
+ToDo: Aria Support for these buttons
 
 
