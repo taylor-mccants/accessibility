@@ -282,6 +282,8 @@ select {
     text-transform: none
 }
 
+
+
 [type=reset],
 [type=submit],
 button,
@@ -1758,7 +1760,22 @@ pre code {
 }
 
 select.form-control:not([size]):not([multiple]) {
-    height: calc(2.25rem + 2px)
+    height: calc(2.25rem + 2px);
+}
+
+
+
+select.form-control option:checked , select.form-control option:hover, option:hover{
+    box-shadow: 0 0 10px 100px #a7d3e9 inset;
+    color: black;
+    background-color: #4b8a7d;
+}
+select option:checked,
+select option:hover {
+    box-shadow: 0 0 10px 100px #000 inset;
+}
+select:focus > option:checked {
+    background: #000 !important;
 }
 
 select.form-control:focus::-ms-value {
@@ -4062,7 +4079,7 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: hsla(0, 0%, 100%, .5)
+    color: hsla(0, 0%, 100%, .9)
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
