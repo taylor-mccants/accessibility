@@ -26,8 +26,8 @@
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
+                            <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
+                            <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
         </div>
     </header>
 
-    <nav class="container-fluid bg-dark nav" role="navigation">
+    <div class="container-fluid bg-dark nav">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
@@ -44,8 +44,8 @@
                 <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <div class="navbar-nav mr-auto">
+                <div class="collapse navbar-collapse" id="nav-bar-content" >
+                    <div class="navbar-nav mr-auto" role="navigation">
                         <div class="nav-item">
                             <a class="nav-link" href="./">Homepage</a>
                         </div>
@@ -111,13 +111,13 @@
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
+                        <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button-1" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
+                        <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
     <main class="container main" id="main" role="main">
         <div class="row no-gutters">
@@ -143,8 +143,8 @@
                                 <label for="login-remember-control" class="form-check-label">Keep me logged in</label>
                             </div>
                         </div>
-                        <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
-                        <button class="btn btn-link ml-3" id="login-forgot-button" type="button">Forgot password</button>
+                        <button class="btn btn-primary" id="login-login-button" type="submit" role="button">Login</button>
+                        <button class="btn btn-link ml-3" id="login-forgot-button" type="button" role="button">Forgot password</button>
                     </form>
                 </fieldset>
             </section>
@@ -157,7 +157,7 @@
                     <form id="register-form" novalidate>
                         <fieldset class="form-group">
                             <legend class="form-label" id="register-basic-legend">Basic information
-                                <small class="text-secondary">(optional)</small>
+                                <small class="text-secondary">(required)</small>
                             </legend>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-6">
@@ -217,7 +217,7 @@
                                 </div>
                             </div>
                         </fieldset>
-                        <button class="btn btn-primary" id="register-register-button">Register</button>
+                        <button class="btn btn-primary" id="register-register-button" role="button">Register</button>
                     </form>
                 </fieldset>
             </section>

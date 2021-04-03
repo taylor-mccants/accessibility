@@ -15,7 +15,7 @@ is accessed by, it's hard to change.
 
 ### Page Regions
 
-Identified Page Regions (ARIA roles) for index.html:
+Identified Page Regions (ARIA roles) for index.html, empty.html, article.html, login.html:
 - banner
 - navigation
 - button  
@@ -24,13 +24,23 @@ Identified Page Regions (ARIA roles) for index.html:
 - complementary
 - contentinfo
 
-ToDo: for all the other pages
+
 
 ### Font size 
 
 The font size is dynamically changeable on index.html
 
-ToDo: Aria Support for these buttons
+- use aria-label for aria support
+
+### Reading  order (screen reader)
+
+Counter intuitive: 
+- The legend of "Basic Information" has an (Optional) in it although
+it should be the required information part.
+  
+- Jaws always says "Ungültige Eingabe" when accessing a text field on the login page.
+
+ToDo: not sure if this section is already done?
 
 ## Exercise 4 – Accessible forms
 

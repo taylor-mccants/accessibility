@@ -26,8 +26,8 @@
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
+                            <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
+                            <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
                         </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@
                 <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <div class="navbar-nav mr-auto">
+                <div class="collapse navbar-collapse" id="nav-bar-content" >
+                    <div class="navbar-nav mr-auto" role="navigation">
                         <div class="nav-item">
                             <a class="nav-link" href="./">Homepage</a>
                         </div>
@@ -111,8 +111,8 @@
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
+                        <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button-1" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
+                        <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
     </div>
 
 
-    <div class="container-fluid bg-dark mt-4 footer">
+    <div class="container-fluid bg-dark mt-4 footer" role="contentinfo">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>

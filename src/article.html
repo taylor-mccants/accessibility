@@ -26,8 +26,8 @@
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
+                            <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
+                            <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
                         </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@
                 <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <div class="navbar-nav mr-auto">
+                <div class="collapse navbar-collapse" id="nav-bar-content" >
+                    <div class="navbar-nav mr-auto" role="navigation">
                         <div class="nav-item">
                             <a class="nav-link" href="./">Homepage</a>
                         </div>
@@ -111,17 +111,16 @@
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
+                        <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button-1" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
+                        <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container mt-4 main" id="main">
+    <div class="container mt-4 main" id="main" role="main">
         <div class="p-5 bg-white">
-            <div class="text-primary text-center mb-4 title">Global temperature record shows 2016 as the warmest year on record</div>
+            <div class="text-primary text-center mb-4 title" >Global temperature record shows 2016 as the warmest year on record</div>
             <div class="text-center wrapper">
                 <img src="./img/temperature.jpg" class="figure-img img-fluid">
                 <p class="figure-caption text-center px-5">The graphic shows the global mean surface temperature change since 1880 till nowadays. The grey curve indicates
@@ -140,53 +139,53 @@
                     <col>
                     <colgroup span="2"></colgroup>
                     <tbody class="thead-dark">
-                        <tr>
+                        <tr role="row">
                             <td class="align-middle" rowspan="2">Century</td>
                             <td class="align-middle" rowspan="2">Year</td>
                             <td class="align-middle" colspan="2">Temperature</td>
                         </tr>
-                        <tr>
+                        <tr role="row">
                             <td class="align-middle">Average</td>
                             <td class="align-middle">Smoothed</td>
                         </tr>
                     </tbody>
                     <tbody>
-                        <tr>
+                        <tr role="row">
                             <td class="align-middle" rowspan="2">19th century</td>
-                            <td>1880</td>
-                            <td>-0.20</td>
-                            <td>-0.13</td>
+                            <td role="cell">1880</td>
+                            <td role="cell">-0.20</td>
+                            <td role="cell">-0.13</td>
                         </tr>
-                        <tr>
-                            <td>1890</td>
-                            <td>-0.37</td>
-                            <td>-0.26</td>
+                        <tr role="row">
+                            <td role="cell">1890</td>
+                            <td role="cell">-0.37</td>
+                            <td role="cell">-0.26</td>
                         </tr>
                     </tbody>
                     <tbody>
-                        <tr>
+                        <tr role="row">
                             <td class="align-middle" rowspan="2">20th century</td>
-                            <td>1920</td>
-                            <td>-0.27</td>
-                            <td>-0.26</td>
+                            <td role="cell">1920</td>
+                            <td role="cell">-0.27</td>
+                            <td role="cell">-0.26</td>
                         </tr>
-                        <tr>
-                            <td>1990</td>
-                            <td>0.44</td>
-                            <td>0.34</td>
+                        <tr role="row">
+                            <td role="cell">1990</td>
+                            <td role="cell">0.44</td>
+                            <td role="cell">0.34</td>
                         </tr>
                     </tbody>
                     <tbody>
-                        <tr>
+                        <tr role="row">
                             <td class="align-middle" rowspan="2">21st century</td>
-                            <td>2000</td>
-                            <td>0.42</td>
-                            <td>0.52</td>
+                            <td role="cell">2000</td>
+                            <td role="cell">0.42</td>
+                            <td role="cell">0.52</td>
                         </tr>
-                        <tr>
-                            <td>2016</td>
-                            <td>0.99</td>
-                            <td>0.91</td>
+                        <tr role="row">
+                            <td role="cell">2016</td>
+                            <td role="cell">0.99</td>
+                            <td role="cell">0.91</td>
                         </tr>
                     </tbody>
                 </table>
@@ -194,7 +193,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-dark mt-4 footer">
+    <div class="container-fluid bg-dark mt-4 footer" role="contentinfo">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
@@ -205,7 +204,7 @@
             </div>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
     <script type="text/javascript" src="./js/bootstrap.js"></script>
