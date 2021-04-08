@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
-                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg">
+                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="Logo of the Lorem Ipsum Institute of Technology">
                     <div class="media-body align-self-center">
                         <div class="mb-0 title">Lorem Ipsum
                             <br>Institute of Technology
@@ -39,7 +39,7 @@
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
-                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40">
+                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Logo of the Lorem Ipsum Institute of Technology">
                 </div>
                 <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
@@ -122,8 +122,8 @@
         <div class="p-5 bg-white">
             <div class="text-primary text-center mb-4 title" >Global temperature record shows 2016 as the warmest year on record</div>
             <div class="text-center wrapper">
-                <img src="./img/temperature.jpg" class="figure-img img-fluid">
-                <p class="figure-caption text-center px-5">The graphic shows the global mean surface temperature change since 1880 till nowadays. The grey curve indicates
+                <img src="./img/temperature.jpg" class="figure-img img-fluid" alt="Line chart of global average temperature from 1880 to 2016", aria-describedby="description">
+                <p id="description" class="figure-caption text-center px-5">The graphic shows the global mean surface temperature change since 1880 till nowadays. The grey curve indicates
                     the annual average temperature and the black curve shows the smoothed result. Over the last two centuries,
                     the mean tempurature has increased by around 1 degree Celcius.</p>
             </div>
@@ -138,52 +138,52 @@
                     <col>
                     <col>
                     <colgroup span="2"></colgroup>
-                    <tbody class="thead-dark">
+                    <thead class="thead-dark">
                         <tr role="row">
-                            <td class="align-middle" rowspan="2">Century</td>
-                            <td class="align-middle" rowspan="2">Year</td>
-                            <td class="align-middle" colspan="2">Temperature</td>
+                            <th class="align-middle" rowspan="2" scope="col">Century</th>
+                            <th class="align-middle" rowspan="2" scope="col">Year</th>
+                            <th class="align-middle" colspan="2" scope="colgroup">Temperature</th>
                         </tr>
                         <tr role="row">
-                            <td class="align-middle">Average</td>
-                            <td class="align-middle">Smoothed</td>
+                            <th class="align-middle" scope="col">Average</th>
+                            <th class="align-middle" scope="col">Smoothed</th>
                         </tr>
-                    </tbody>
+                    </thead>
                     <tbody>
                         <tr role="row">
-                            <td class="align-middle" rowspan="2">19th century</td>
-                            <td role="cell">1880</td>
+                            <th class="align-middle" rowspan="2" scope="rowgroup">19th century</th>
+                            <th role="cell" scope="row">1880</th>
                             <td role="cell">-0.20</td>
                             <td role="cell">-0.13</td>
                         </tr>
                         <tr role="row">
-                            <td role="cell">1890</td>
+                            <th role="cell" scope="row">1890</th>
                             <td role="cell">-0.37</td>
                             <td role="cell">-0.26</td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr role="row">
-                            <td class="align-middle" rowspan="2">20th century</td>
-                            <td role="cell">1920</td>
+                            <th class="align-middle" rowspan="2" scope="rowgroup">20th century</th>
+                            <th role="cell" scope="row">1920</th>
                             <td role="cell">-0.27</td>
                             <td role="cell">-0.26</td>
                         </tr>
                         <tr role="row">
-                            <td role="cell">1990</td>
+                            <th role="cell" scope="row">1990</th>
                             <td role="cell">0.44</td>
                             <td role="cell">0.34</td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr role="row">
-                            <td class="align-middle" rowspan="2">21st century</td>
-                            <td role="cell">2000</td>
+                            <th class="align-middle" rowspan="2" scope="rowgroup">21st century</th>
+                            <th role="cell" scope="row">2000</th>
                             <td role="cell">0.42</td>
                             <td role="cell">0.52</td>
                         </tr>
                         <tr role="row">
-                            <td role="cell">2016</td>
+                            <th role="cell" scope="row">2016</th>
                             <td role="cell">0.99</td>
                             <td role="cell">0.91</td>
                         </tr>
