@@ -57,6 +57,9 @@ function toggleNavigation(event) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    accessibilityButtons()
+
     var dropDownToggles =
         document.querySelectorAll('#nav-bar-content .dropdown-toggle');
 

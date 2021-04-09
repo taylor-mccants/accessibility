@@ -1,5 +1,15 @@
 # accessibility
 
+##Bonus
+###High Contrast Mode
+
+Introduced new color mode for enhanced visibility, 
+Button next to the font size changing buttons to toggle high contrast mode
+Highlights:
+- If active, it's active on all the pages
+- Nice animation from light to dark mode
+- Chosen Black-Yellow (Non-Blue colors) as this has a decreased 
+  scattering effect (physics) and therefore appears sharper/richer in contrast to the reader
 
 ## Exercise 2 - Accessible Design
 

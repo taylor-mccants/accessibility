@@ -1,0 +1,77 @@
+/*!
+*   Accessibility Buttons v4.0.0
+*   http://tiagoporto.github.io/accessibility-buttons
+*   Copyright (c) 2014-present Tiago Porto (http://tiagoporto.com)
+*   Released under the MIT license
+*/
+html {
+    font-size: 100%
+}
+
+body {
+    -webkit-transition: background 1s ease, font-size .7s linear;
+    transition: background 1s ease, font-size .7s linear
+}
+
+button, input, select, textarea {
+    -webkit-transition: all .6s linear;
+    transition: all .6s linear
+}
+
+.accessibility-font {
+    font-size: 1.25em;
+    font-size: 1.25rem
+}
+
+.accessibility-font button, .accessibility-font input, .accessibility-font select, .accessibility-font textarea {
+    font-size: 1.041625em;
+    font-size: 1.04163rem
+}
+
+.accessibility-contrast {
+    color: #fff;
+    background: #000
+}
+
+.accessibility-contrast .bg-white {
+    background-color: #1f1f1f !important;
+}
+
+.accessibility-contrast .bg-light,
+.accessibility-contrast .d-flex,
+.accessibility-contrast .flex-column,
+.accessibility-contrast .bg-light{
+    background: #000 !important;
+    background-color: #000 !important;
+}
+.accessibility-contrast body,
+.accessibility-contrast .dropdown-menu{
+    background: #000 !important;
+    background-color: #000 !important;
+}
+body{
+    background: #f8f9fa;
+    background-color: #f8f9fa ;
+}
+
+
+
+
+.accessibility-contrast p,
+.accessibility-contrast a ,
+.accessibility-contrast h1,
+.accessibility-contrast h2,
+.accessibility-contrast h3,
+.accessibility-contrast h4,
+.accessibility-contrast h5,
+.accessibility-contrast .text-primary,
+.accessibility-contrast legend,
+.accessibility-contrast div,
+.accessibility-contrast title,
+.accessibility-contrast .text-muted,
+.accessibility-contrast .btn-link,
+.accessibility-contrast .btn-primary,
+.accessibility-contrast .text-secondary,
+.accessibility-contrast .nav-link {
+    color: #ffff00 !important;
+}
