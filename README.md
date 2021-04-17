@@ -1,6 +1,7 @@
 # accessibility
 
 ##Bonus
+
 ###High Contrast Mode
 
 Introduced new color mode for enhanced visibility, 

@@ -11,7 +11,7 @@ function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableTo
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
@@ -68,39 +68,39 @@ var accessibilityButtons = function accessibilityButtons(options) {
         }
     }
 
-    var $body = document.body,
-        $accessibilityButtons = _toConsumableArray(document.querySelectorAll('[data-accessibility]')),
-        $fontButton = $accessibilityButtons.filter(function (button) {
+    var body = document.body,
+        accessibilityButtons = _toConsumableArray(document.querySelectorAll('[data-accessibility]')),
+        fontButton = accessibilityButtons.filter(function (button) {
             return button.getAttribute('data-accessibility') === 'font';
         }),
-        $contrastButton = $accessibilityButtons.filter(function (button) {
+        contrastButton = accessibilityButtons.filter(function (button) {
             return button.getAttribute('data-accessibility') === 'contrast';
         }),
         storageFont = localStorage.accessibility_font,
         storageContrast = localStorage.accessibility_contrast; // Check if exist storage and set the correct button names and aria attributes
 
 
-    if (storageFont && $fontButton) {
-        $body.classList.add('accessibility-font');
-        $fontButton.forEach(function (button) {
+    if (storageFont && fontButton) {
+        body.classList.add('accessibility-font');
+        fontButton.forEach(function (button) {
             button.innerHTML = setting.font.nameButtonDecrease;
             button.setAttribute('aria-label', setting.font.ariaLabelButtonDecrease);
         });
-    } else if ($fontButton) {
-        $fontButton.forEach(function (button) {
+    } else if (fontButton) {
+        fontButton.forEach(function (button) {
             button.innerHTML = setting.font.nameButtonIncrease;
             button.setAttribute('aria-label', setting.font.ariaLabelButtonIncrease);
         });
     }
 
-    if (storageContrast && $contrastButton) {
-        $body.classList.add('accessibility-contrast');
-        $contrastButton.forEach(function (button) {
+    if (storageContrast && contrastButton) {
+        body.classList.add('accessibility-contrast');
+        contrastButton.forEach(function (button) {
             button.innerHTML = setting.contrast.nameButtonRemove;
             button.setAttribute('aria-label', setting.contrast.ariaLabelButtonRemove);
         });
-    } else if ($contrastButton) {
-        $contrastButton.forEach(function (button) {
+    } else if (contrastButton) {
+        contrastButton.forEach(function (button) {
             button.innerHTML = setting.contrast.nameButtonAdd;
             button.setAttribute('aria-label', setting.contrast.ariaLabelButtonAdd);
         });
@@ -115,35 +115,35 @@ var accessibilityButtons = function accessibilityButtons(options) {
 
     function accessibility() {
         return function () {
-            var $this = this;
-            var type = $this.getAttribute('data-accessibility');
+            var _this = this;
+            var type = _this.getAttribute('data-accessibility');
             var classname = "accessibility-".concat(type);
 
-            if (hasClass($body, classname)) {
-                $body.classList.remove(classname);
+            if (hasClass(body, classname)) {
+                body.classList.remove(classname);
 
                 if (type === 'font') {
-                    $fontButton.forEach(function (button) {
+                    fontButton.forEach(function (button) {
                         button.innerHTML = setting.font.nameButtonIncrease;
                         button.setAttribute('aria-label', setting.font.ariaLabelButtonIncrease);
                     });
                     localStorage.removeItem('accessibility_font');
                 } else if (type === 'contrast') {
-                    $contrastButton.forEach(function (button) {
+                    contrastButton.forEach(function (button) {
                         button.innerHTML = setting.contrast.nameButtonAdd;
                         button.setAttribute('aria-label', setting.contrast.ariaLabelButtonAdd);
                     });
                     localStorage.removeItem('accessibility_contrast');
                 }
             } else {
-                $body.classList.add(classname);
+                body.classList.add(classname);
 
                 if (type === 'font') {
                     if (!storageFont) {
                         localStorage.setItem('accessibility_font', true);
                     }
 
-                    $fontButton.forEach(function (button) {
+                    fontButton.forEach(function (button) {
                         button.innerHTML = setting.font.nameButtonDecrease;
                         button.setAttribute('aria-label', setting.font.ariaLabelButtonDecrease);
                     });
@@ -152,7 +152,7 @@ var accessibilityButtons = function accessibilityButtons(options) {
                         localStorage.setItem('accessibility_contrast', true);
                     }
 
-                    $contrastButton.forEach(function (button) {
+                    contrastButton.forEach(function (button) {
                         button.innerHTML = setting.contrast.nameButtonRemove;
                         button.setAttribute('aria-label', setting.contrast.ariaLabelButtonRemove);
                     });
@@ -162,7 +162,7 @@ var accessibilityButtons = function accessibilityButtons(options) {
     } // Listening Click Event
 
 
-    for (var i = 0; i < $accessibilityButtons.length; i++) {
-        $accessibilityButtons[i].addEventListener('click', accessibility());
+    for (var i = 0; i < accessibilityButtons.length; i++) {
+        accessibilityButtons[i].addEventListener('click', accessibility());
     }
 };

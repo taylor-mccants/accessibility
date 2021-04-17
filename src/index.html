@@ -15,9 +15,74 @@
     <script>
         accessibilityButtons();
     </script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <link rel="stylesheet" href="demo/style.css">
+    <link rel="stylesheet" href="css/anythingzoomer.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.anythingzoomer.js"></script>
+    <script>
+        var $jq = jQuery.noConflict();
+
+        $jq(function() {
+
+            // clone the small area, the css will define the dimensions
+            // default class name for the large area is "large"
+            $jq("#zoom").anythingZoomer({
+                clone: true
+            });
+            var zoomFactor = 1.5;
+
+            $jq('.large').css({
+                fontSize: (100 * zoomFactor) +"%",
+                height: (window.screen.height *zoomFactor) +"px",
+                width: (window.screen.width *zoomFactor) +"px",
+            });
+
+            $jq("body").on("mousemove", function(e) {
+
+                $jq('.large').css({
+                    marginTop:  -(e.pageY  *0.5 -50) + "px",
+                    marginLeft: - (e.pageX *0.2 +250) + "px"
+                })
+                console.log(e.pageY)
+
+
+
+            });
+
+        });
+        var zoomer = false;
+
+        window.onload =(function () {
+
+            $jq('#zoom').data('zoomer').setEnabled(zoomer);
+        });
+
+        function magnifierFunction(){
+            //document.getElementById("zoomButton").innerHTML = zoomer?"Disable Magnifier":"Enable Magnifier";
+
+            if(zoomer)
+                $jq('#zoom').anythingZoomer('disable'); // disable AnythingZoomer
+            else {
+                $jq('#zoom').anythingZoomer('enable');  // enable AnythingZoomer
+
+            }
+
+             zoomer = !zoomer;
+        }
+    </script>
+
+
 </head>
 
-<body class="d-flex flex-column">
+<body class="d-flex flex-column az-wrap" >
+<div id="zoom" class="text">
+    <div class="small">
+
+
     <header class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
@@ -36,13 +101,20 @@
                             <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
                         </div>
                         <div>
-                        <button type="button"  class="btn btn-dark" data-accessibility="contrast">Add Contrast</button>
+                        <button type="button" id="contrastButton" class="btn btn-dark" data-accessibility="contrast">Add Contrast</button>
+                    </div>
+                        <br>
+                        <div>
+                        <button type="button" id="zoomButton" class="btn btn-dark" onclick="magnifierFunction()">Enable/Disable Magnifier</button>
                     </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+
+
 
     <div class="container-fluid bg-dark nav">
         <div class="container">
@@ -250,6 +322,30 @@
     <script type="text/javascript" src="./js/bootstrap.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
+
+
+
+    </div>
+    </div>
+
+<div  class="large">
+</div>
+<script>
+
+    var zoomFactor = 1;
+    const style = document.createElement('style');
+    style.innerHTML = '     .large {     width: '+window.screen.width + "px;"+'  height: '+window.screen.height + "px;"+'    }';
+    document.head.appendChild(style);
+
+    $jq('.large').css({
+        fontSize: "5em"
+    });
+
+
+
+</script>
+
+
 
 </body>
 
