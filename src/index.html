@@ -24,15 +24,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/jquery.anythingzoomer.js"></script>
     <script>
+
+        var f = navigator.userAgent.search("Firefox");
+        console.log("UA: "+f)
+
         var $jq = jQuery.noConflict();
 
         $jq(function() {
 
             // clone the small area, the css will define the dimensions
             // default class name for the large area is "large"
-            $jq("#zoom").anythingZoomer({
-                clone: true
-            });
+            if (f > -1) {
+                $jq("#zoom").anythingZoomer({
+                    clone: true
+                });
+            }
             var zoomFactor = 1.5;
 
             $jq('.large').css({
@@ -57,13 +63,17 @@
         var zoomer = false;
 
         window.onload =(function () {
-
-            $jq('#zoom').data('zoomer').setEnabled(zoomer);
+            if (f > -1) {
+                $jq('#zoom').data('zoomer').setEnabled(zoomer);
+            }
         });
 
         function magnifierFunction(){
             //document.getElementById("zoomButton").innerHTML = zoomer?"Disable Magnifier":"Enable Magnifier";
 
+            if (f == -1) {
+                window.alert("Magnifying function currently only works in firefox, we're sorry!")
+            }
             if(zoomer)
                 $jq('#zoom').anythingZoomer('disable'); // disable AnythingZoomer
             else {
