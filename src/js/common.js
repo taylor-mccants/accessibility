@@ -34,9 +34,11 @@ function openMenu(event) {
     for (var j = 0; j < dropDownMenus.length; j++) {
         dropDownMenus[j].classList.remove('show');
     }
+    currentDropDownButton.ariaExpanded = false;
 
     if (!isOpen) {
         currentDropDownMenu.classList.add('show');
+        currentDropDownButton.ariaExpanded = true;
     }
 }
 
@@ -48,11 +50,15 @@ function toggleNavigation(event) {
     event.stopPropagation();
     event.preventDefault();
 
+    var navbarToggler = event.target;
+
     var content = document.getElementById('nav-bar-content');
     if (content.classList.contains('collapse')) {
         content.classList.remove('collapse');
+        navbarToggler.ariaExpanded = true;
     } else {
         content.classList.add('collapse');
+        navbarToggler.ariaExpanded = false;
     }
 }
 
