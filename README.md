@@ -71,3 +71,57 @@ Added a function to update error messages according to the specific error. These
 
 ToDo: Set up aria-live on all error messages? Change small tag to indicate it is clickable to focus the corresponding input field. Test with screen reader.
 
+## Exercise 5 – Accessible images
+
+
+## Exercise 6 – Accessible tables
+
+
+
+## Exercise 7 – Accessibility test
+
+### Wave:
+article.html: 
+- Homepage button in the navigation bar has no value text. (ok)
+- the page has no headings (ok)
+
+empty.html:
+- Homepage button in the navigation bar has no value text. (ok)
+- missing first level heading <h1> (ok)
+
+### CSS disabled:
+article.html:
+- inaccessible design menu (ok)
+- twice the button increase font size and decrease font size as well as twice add contrast button (ok)
+- about contact us help etc. all on one line what does that mean?
+- no headings (ok)
+
+index.html:
+- about contact us help etc. all on one line what does that mean?
+- twice the button increase font size and decrease font size as well as twice add contrast button (ok)
+- are the studies and researches marked as complentary aria label? (ok)
+- Login is not correctly integrated in the navigation?
+- heading sizes? can there be several h1 on the same page in different sections? 
+
+empty.html:
+- missing headings (not found lowercase, or faculty also in lowercase letters) (ok)
+- twice the button increase font size and decrease font size as well as twice add contrast button (ok)
+- inaccessible design menu (ok)
+
+login.html:
+- twice the button increase font size and decrease font size as well as twice add contrast button (ok)
+- Login is not correctly integrated in the navigation
+
+### JAWS:
+increase/ decrease font size button come before navigation: should we change that?
+skip links for directly go to footer etc? cant hear them
+
+### Open points:
+how is login handled in navigation?
+how are the additional buttons handled (twice increase/decrease font size and add contrast)? (ok)
+
+navigation, coloring inverting, underlining items?
+login.html: Login and create new account on the line and not in the box?
+
+what about the contact us, help etc.? also make a list out of it, (ok)
+skip links for directly go to footer etc? should be done now ?????????

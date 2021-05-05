@@ -18,15 +18,21 @@
 </head>
 
 <body class="d-flex flex-column ">
-    <div class="container-fluid d-none d-lg-block my-4 header">
+<div id="skip-links" style="visibility: hidden">
+    <a href="#header"> Skip to header</a>
+    <a href="#nav-bar-content"> Skip to navbar</a>
+    <a href="#main"> Skip to main</a>
+    <a href="#footer"> Skip to footer</a>
+</div>
+    <header header="header" class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
                     <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="Logo of the Lorem Ipsum Institute of Technology">
                     <div class="media-body align-self-center">
-                        <div class="mb-0 title">Lorem Ipsum
+                        <h1 class="mb-0 title">Lorem Ipsum
                             <br>Institute of Technology
-                        </div>
+                        </h1>
                     </div>
                 </div>
                 <div class="col-4">
@@ -42,7 +48,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="container-fluid bg-dark nav">
         <div class="container">
@@ -50,72 +56,86 @@
                 <div class="navbar-brand d-lg-none">
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Logo of the Lorem Ipsum Institute of Technology">
                 </div>
-                <button class="navbar-toggler" type="button">
+                <button class="navbar-toggler" type="button" aria-label="Navbar" aria-haspopup="true"
+                        aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="nav-bar-content" >
-                    <div class="navbar-nav mr-auto" role="navigation">
-                        <div class="nav-item">
+                <nav class="collapse navbar-collapse" id="nav-bar-content" >
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
                             <a class="nav-link" href="./">Homepage</a>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
-                                </div>
-                                <div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" aria-haspopup="true"
+                               aria-expanded="false">Faculties</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied
+                                        sciences</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture
+                                        &amp; planning</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction
+                                        &amp; environment</a>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
-                            <div class="dropdown-menu">
-                                <div>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health
+                                        &amp; social sciences</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" aria-haspopup="true"
+                               aria-expanded="false">Education &amp;
+                                research</a>
+                            <ul class="dropdown-menu">
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing
+                                        education</a>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="navbar-nav">
-                        <div class="nav-item">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" aria-haspopup="true"
+                               aria-expanded="false">Industry &amp;
+                                partners</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public
+                                        relations</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="./empty.html?title=Commercialization">Commercialization</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors
+                                        &amp; partners</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
                             <a class="nav-link" href="./login.html">Login</a>
-                        </div>
-                    </div>
-                </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
@@ -132,7 +152,7 @@
     </div>
     <div class="container mt-4 main" id="main" role="main">
         <div class="p-5 bg-white">
-            <div class="text-primary text-center mb-4 title" >Global temperature record shows 2016 as the warmest year on record</div>
+            <h1 class="text-primary text-center mb-4 title" >Global temperature record shows 2016 as the warmest year on record</h1>
             <div class="text-center wrapper">
                 <img src="./img/temperature.jpg" class="figure-img img-fluid" alt="Line chart of global average temperature from 1880 to 2016", aria-describedby="description">
                 <p id="description" class="figure-caption text-center px-5">The graphic shows the global mean surface temperature change since 1880 till nowadays. The grey curve indicates
@@ -205,7 +225,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-dark mt-4 footer" role="contentinfo">
+    <footer id="footer" class="container-fluid bg-dark mt-4 footer" role="contentinfo">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
@@ -215,7 +235,7 @@
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a>
             </div>
         </div>
-    </div>
+    </footer>
 
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
