@@ -10,10 +10,18 @@ function changeFontSize(increase) {
 
     window.console.log("fun " +size)
 
+    var fontIncreaseBtn = document.getElementById("font-increase-button");
+    var fontDecreaseBtn = document.getElementById("font-decrease-button");
     if(increase){
         body.style.fontSize = (size+10)+"%";
+        fontIncreaseBtn.style.fontSize = (size+10)+"%";
+        fontDecreaseBtn.style.fontSize = (size+10)+"%";
     }else{
         body.style.fontSize = (size-10)+"%";
+        fontIncreaseBtn.style.fontSize = (size-10)+"%";
+        fontDecreaseBtn.style.fontSize = (size-10)+"%";
+
+
     }
 }
 

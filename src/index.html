@@ -71,7 +71,8 @@
             //document.getElementById("zoomButton").innerHTML = zoomer?"Disable Magnifier":"Enable Magnifier";
 
             if (f == -1) {
-                window.alert("Magnifying function currently only works in firefox, we're sorry!")
+                window.alert("Magnifier function currently only works in firefox, we're sorry!")
+                return
             }
             if(zoomer)
                 $jq('#zoom').anythingZoomer('disable'); // disable AnythingZoomer

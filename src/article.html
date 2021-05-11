@@ -15,6 +15,17 @@
     <script>
         accessibilityButtons();
     </script>
+
+    <!-- Dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="ableplayer/thirdparty/js.cookie.js"></script>
+
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="ableplayer/build/ableplayer.min.css" type="text/css">
+
+    <!-- Able Player JavaScript -->
+    <script src="ableplayer/build/ableplayer.js"></script>
+
 </head>
 
 <body class="d-flex flex-column ">
@@ -24,224 +35,252 @@
     <a href="#main"> Skip to main</a>
     <a href="#footer"> Skip to footer</a>
 </div>
-    <header header="header" class="container-fluid d-none d-lg-block my-4 header">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-8 media">
-                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="Logo of the Lorem Ipsum Institute of Technology">
-                    <div class="media-body align-self-center">
-                        <h1 class="mb-0 title">Lorem Ipsum
-                            <br>Institute of Technology
-                        </h1>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="btn-toolbar justify-content-end">
-                        <div class="btn-group btn-group-sm">
-                            <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
-                            <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
-                        </div>
-                        <div>
-                            <button type="button"  class="btn btn-dark" data-accessibility="contrast">Add Contrast</button>
-                        </div>
-                    </div>
+<header header="header" class="container-fluid d-none d-lg-block my-4 header">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-8 media">
+                <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg"
+                     alt="Logo of the Lorem Ipsum Institute of Technology">
+                <div class="media-body align-self-center">
+                    <h1 class="mb-0 title">Lorem Ipsum
+                        <br>Institute of Technology
+                    </h1>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <div class="container-fluid bg-dark nav">
-        <div class="container">
-            <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
-                <div class="navbar-brand d-lg-none">
-                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Logo of the Lorem Ipsum Institute of Technology">
-                </div>
-                <button class="navbar-toggler" type="button" aria-label="Navbar" aria-haspopup="true"
-                        aria-expanded="false">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <nav class="collapse navbar-collapse" id="nav-bar-content" >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./">Homepage</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" aria-haspopup="true"
-                               aria-expanded="false">Faculties</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied
-                                        sciences</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture
-                                        &amp; planning</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction
-                                        &amp; environment</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health
-                                        &amp; social sciences</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" aria-haspopup="true"
-                               aria-expanded="false">Education &amp;
-                                research</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing
-                                        education</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" aria-haspopup="true"
-                               aria-expanded="false">Industry &amp;
-                                partners</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public
-                                        relations</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                       href="./empty.html?title=Commercialization">Commercialization</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors
-                                        &amp; partners</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./login.html">Login</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="d-lg-none">
+            <div class="col-4">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                        <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button-1" aria-label="Increase font size" onclick="changeFontSize(true)">A+</button>
-                        <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size" onclick="changeFontSize(false)">A-</button>
+                        <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button"
+                                aria-label="Increase font size" onclick="changeFontSize(true)">A+
+                        </button>
+                        <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button"
+                                aria-label="Decrease font size" onclick="changeFontSize(false)">A-
+                        </button>
                     </div>
                     <div>
-                        <button type="button"  class="btn btn-dark" data-accessibility="contrast">Add Contrast</button>
+                        <button type="button" class="btn btn-dark" data-accessibility="contrast">Add Contrast</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mt-4 main" id="main" role="main">
-        <div class="p-5 bg-white">
-            <h1 class="text-primary text-center mb-4 title" >Global temperature record shows 2016 as the warmest year on record</h1>
-            <div class="text-center wrapper">
-                <img src="./img/temperature.jpg" class="figure-img img-fluid" alt="Line chart of global average temperature from 1880 to 2016", aria-describedby="description">
-                <p id="description" class="figure-caption text-center px-5">The graphic shows the global mean surface temperature change since 1880 till nowadays. The grey curve indicates
-                    the annual average temperature and the black curve shows the smoothed result. Over the last two centuries,
-                    the mean tempurature has increased by around 1 degree Celcius.</p>
+</header>
+
+<div class="container-fluid bg-dark nav">
+    <div class="container">
+        <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
+            <div class="navbar-brand d-lg-none">
+                <img class="rounded-right" src="./img/logo.jpg" width="40" height="40"
+                     alt="Logo of the Lorem Ipsum Institute of Technology">
             </div>
-            <p>The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans through
-                various spans of time. The recently data published by NASA is one of the most detailed information exists
-                since 1850, when methodical thermometer-based records began.
-            </p>
-            <p>Sixteen of the 17 warmest years in the 136-year record all have occurred since 2001, with the exception of 1998.
-                The year 2016 ranks as the warmest on record.</p>
-            <div class="table-responsive mt-4 wrapper">
-                <table class="table text-center">
-                    <col>
-                    <col>
-                    <colgroup span="2"></colgroup>
-                    <thead class="thead-dark">
-                        <tr role="row">
-                            <th class="align-middle" rowspan="2" scope="col">Century</th>
-                            <th class="align-middle" rowspan="2" scope="col">Year</th>
-                            <th class="align-middle" colspan="2" scope="colgroup">Temperature</th>
-                        </tr>
-                        <tr role="row">
-                            <th class="align-middle" scope="col">Average</th>
-                            <th class="align-middle" scope="col">Smoothed</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr role="row">
-                            <th class="align-middle" rowspan="2" scope="rowgroup">19th century</th>
-                            <th role="cell" scope="row">1880</th>
-                            <td role="cell">-0.20</td>
-                            <td role="cell">-0.13</td>
-                        </tr>
-                        <tr role="row">
-                            <th role="cell" scope="row">1890</th>
-                            <td role="cell">-0.37</td>
-                            <td role="cell">-0.26</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr role="row">
-                            <th class="align-middle" rowspan="2" scope="rowgroup">20th century</th>
-                            <th role="cell" scope="row">1920</th>
-                            <td role="cell">-0.27</td>
-                            <td role="cell">-0.26</td>
-                        </tr>
-                        <tr role="row">
-                            <th role="cell" scope="row">1990</th>
-                            <td role="cell">0.44</td>
-                            <td role="cell">0.34</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr role="row">
-                            <th class="align-middle" rowspan="2" scope="rowgroup">21st century</th>
-                            <th role="cell" scope="row">2000</th>
-                            <td role="cell">0.42</td>
-                            <td role="cell">0.52</td>
-                        </tr>
-                        <tr role="row">
-                            <th role="cell" scope="row">2016</th>
-                            <td role="cell">0.99</td>
-                            <td role="cell">0.91</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <button class="navbar-toggler" type="button" aria-label="Navbar" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="nav-bar-content">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Homepage</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" aria-haspopup="true"
+                           aria-expanded="false">Faculties</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied
+                                    sciences</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture
+                                    &amp; planning</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction
+                                    &amp; environment</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health
+                                    &amp; social sciences</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" aria-haspopup="true"
+                           aria-expanded="false">Education &amp;
+                            research</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing
+                                    education</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" aria-haspopup="true"
+                           aria-expanded="false">Industry &amp;
+                            partners</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Public+relations">Public
+                                    relations</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                   href="./empty.html?title=Commercialization">Commercialization</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors
+                                    &amp; partners</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="d-lg-none">
+            <div class="btn-toolbar justify-content-end">
+                <div class="btn-group btn-group-sm">
+                    <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button-1"
+                            aria-label="Increase font size" onclick="changeFontSize(true)">A+
+                    </button>
+                    <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button-1"
+                            aria-label="Decrease font size" onclick="changeFontSize(false)">A-
+                    </button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-dark" data-accessibility="contrast">Add Contrast</button>
+                </div>
             </div>
         </div>
     </div>
-
-    <footer id="footer" class="container-fluid bg-dark mt-4 footer" role="contentinfo">
-        <div class="container text-center py-3">
-            <div class="row justify-content-around">
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Contact+us">Contact us</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help">Help</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services">Terms of service</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a>
-            </div>
+</div>
+<div class="container mt-4 main" id="main" role="main">
+    <div class="p-5 bg-white">
+        <h1 class="text-primary text-center mb-4 title">Global temperature record shows 2016 as the warmest year on
+            record</h1>
+        <div class="text-center wrapper">
+            <img src="./img/temperature.jpg" class="figure-img img-fluid"
+                 alt="Line chart of global average temperature from 1880 to 2016" , aria-describedby="description">
+            <p id="description" class="figure-caption text-center px-5">The graphic shows the global mean surface
+                temperature change since 1880 till nowadays. The grey curve indicates
+                the annual average temperature and the black curve shows the smoothed result. Over the last two
+                centuries,
+                the mean tempurature has increased by around 1 degree Celcius.</p>
         </div>
-    </footer>
+        <p>The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans
+            through
+            various spans of time. The recently data published by NASA is one of the most detailed information exists
+            since 1850, when methodical thermometer-based records began.
+        </p>
+        <p>Sixteen of the 17 warmest years in the 136-year record all have occurred since 2001, with the exception of
+            1998.
+            The year 2016 ranks as the warmest on record.</p>
+        <div class="table-responsive mt-4 wrapper">
+            <table class="table text-center">
+                <col>
+                <col>
+                <colgroup span="2"></colgroup>
+                <thead class="thead-dark">
+                <tr role="row">
+                    <th class="align-middle" rowspan="2" scope="col">Century</th>
+                    <th class="align-middle" rowspan="2" scope="col">Year</th>
+                    <th class="align-middle" colspan="2" scope="colgroup">Temperature</th>
+                </tr>
+                <tr role="row">
+                    <th class="align-middle" scope="col">Average</th>
+                    <th class="align-middle" scope="col">Smoothed</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr role="row">
+                    <th class="align-middle" rowspan="2" scope="rowgroup">19th century</th>
+                    <th role="cell" scope="row">1880</th>
+                    <td role="cell">-0.20</td>
+                    <td role="cell">-0.13</td>
+                </tr>
+                <tr role="row">
+                    <th role="cell" scope="row">1890</th>
+                    <td role="cell">-0.37</td>
+                    <td role="cell">-0.26</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr role="row">
+                    <th class="align-middle" rowspan="2" scope="rowgroup">20th century</th>
+                    <th role="cell" scope="row">1920</th>
+                    <td role="cell">-0.27</td>
+                    <td role="cell">-0.26</td>
+                </tr>
+                <tr role="row">
+                    <th role="cell" scope="row">1990</th>
+                    <td role="cell">0.44</td>
+                    <td role="cell">0.34</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr role="row">
+                    <th class="align-middle" rowspan="2" scope="rowgroup">21st century</th>
+                    <th role="cell" scope="row">2000</th>
+                    <td role="cell">0.42</td>
+                    <td role="cell">0.52</td>
+                </tr>
+                <tr role="row">
+                    <th role="cell" scope="row">2016</th>
+                    <td role="cell">0.99</td>
+                    <td role="cell">0.91</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center wrapper">
 
-    <script type="text/javascript" src="./js/jquery.js"></script>
-    <script type="text/javascript" src="./js/popper.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/common.js"></script>
-    <script type="text/javascript" src="./js/article.js"></script>
+
+            <video id="video1"  data-youtube-id="TbW_1MtC2So" data-able-player preload="auto" width="480" height="360">
+
+
+            </video>
+
+
+        </div>
+    </div>
+</div>
+
+            <footer id="footer" class="container-fluid bg-dark mt-4 footer" role="contentinfo">
+                <div class="container text-center py-3">
+                    <div class="row justify-content-around">
+                        <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
+                        <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Contact+us">Contact us</a>
+                        <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help">Help</a>
+                        <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services">Terms of
+                            service</a>
+                        <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy
+                            policy</a>
+                    </div>
+                </div>
+            </footer>
+
+            <script type="text/javascript" src="./js/jquery.js"></script>
+            <script type="text/javascript" src="./js/popper.js"></script>
+            <script type="text/javascript" src="./js/bootstrap.js"></script>
+            <script type="text/javascript" src="./js/common.js"></script>
+            <script type="text/javascript" src="./js/article.js"></script>
 </body>
 
 </html>

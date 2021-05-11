@@ -2,7 +2,7 @@
 
 ##Bonus
 
-###High Contrast Mode
+### High Contrast Mode
 
 Introduced new color mode for enhanced visibility, 
 Button next to the font size changing buttons to toggle high contrast mode
@@ -11,6 +11,22 @@ Highlights:
 - Nice animation from light to dark mode
 - Chosen Black-Yellow (Non-Blue colors) as this has a decreased 
   scattering effect (physics) and therefore appears sharper/richer in contrast to the reader
+  
+### Magnifier Function
+
+Magnifier lense on the index page
+- Functionality to activate zoom window
+- (Not perfect, but works)
+- only available for Firefox
+
+### Accessible Video
+Inserted a video on the climate article, explaining topics about human made climate change. 
+Highlights: 
+- Using the AblePlayer (https://ableplayer.github.io/ableplayer/)
+- AblePlayer is highly accessible
+- Best performing in comparison to other web players (http://kensgists.github.io/apt/)
+
+
 
 ## Exercise 2 - Accessible Design
 

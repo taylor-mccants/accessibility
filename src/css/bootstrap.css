@@ -3641,9 +3641,9 @@ tbody.collapse.show {
     padding: .5rem 1rem
 }
 
-.nav-link:focus,
-.nav-link:hover {
-    text-decoration: none
+.nav-link:focus {
+    text-decoration: underline;
+    color: red !important;
 }
 
 .nav-link.disabled {
