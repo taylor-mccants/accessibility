@@ -88,13 +88,43 @@ Added a function to update error messages according to the specific error. These
 ToDo: Set up aria-live on all error messages? Change small tag to indicate it is clickable to focus the corresponding input field. Test with screen reader.
 
 ## Exercise 5 – Accessible images
+As informative images we have identified the following images: The "Lorem Ipsum Logo" on the top left on each page and 
+the three pictures on the index.html page. For making theses images accessible to people using screen readers we used the alt
+attribute of the image tag. Before adding the alt attribute the images where not accessible to people using screen readers.
 
+In the article.html, we found a complex image which shows the average temperature over time. We added an alt attribute to make
+it more accessible. Furthermore, there is a description to text which made accessible with the aria-describedby tag. We chose
+the aria-describedby tag as most screen readers support aria labels whereas only few screen readers recognize the linkage
+figcaption. Furthermore, older browser do not support the html 5 tags like the figcaption.
+TODO: further extension with pros and cons
 
 ## Exercise 6 – Accessible tables
 
+In the original code header cells and data cells did not have the correct html tags. So we changed the tags for header
+cells to the th tag and for data cells to the td tag. As the table consist of row and column headers we added the scope
+attribute to signify whether a header applies to a row or column. Furthermore, for headers which span multiple columns
+resp. rows we set the scope attribute to colgroup resp. rowgroup.
 
+## Additional features
+
+- Contrast mode
+- text magnifier
+- increasing/ decreasing font size
+- accessible video
 
 ## Exercise 7 – Accessibility test
+
+For testing accessibility, we used a three steps testing approach. First, we started to look at webpages with the Wave plugin
+in Chrome. We found that a button in the navigation bar did not have any value text. We also found that on the empty page
+there was no h1 tag but a h6 tag which we replaced. 
+After applying the changes to the code, we started with step two. We looked at the webpages with disabled CSS. We found, 
+that we forgot to apply the changes in the navigation to index and article
+page. We also discovered that the login link was not part of the navigation menu and that the link in the footer were not
+represented as a navigation bar but as separate links. 
+In the third step, we used JAWS and navigated first through the original website to get a feeling how the navigation 
+works on an inaccessible website. Next, we navigated through website with our changes to the code. The first thing we
+noticed was, that it is very difficult for a not impaired person to just use the keyboard and listen to screen reader 
+for navigation, as we already have additional visual information and prior knowledge of the website. 
 
 ### Wave:
 article.html: 
