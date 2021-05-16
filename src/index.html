@@ -42,7 +42,6 @@
             var zoomFactor = 1.5;
 
             $jq('.large').css({
-                fontSize: (100 * zoomFactor) + "%",
                 height: (window.screen.height * zoomFactor) + "px",
                 width: (window.screen.width * zoomFactor) + "px",
             });
@@ -89,7 +88,7 @@
 </head>
 
 <body class="d-flex flex-column az-wrap" style="overflow-x: hidden" >
-<div id="skip-links" aria-hidden="false" style="visibility: hidden">
+<div id="skip-links" class="skip-links" aria-hidden="false">
     <a href="#header"> Skip to header</a>
     <a href="#nav-bar-content"> Skip to navbar</a>
     <a href="#main"> Skip to main</a>
@@ -250,8 +249,8 @@
                     <article class="media mt-4" role="article" aria-labelledby="article1Title">
                         <img class="my-1 mr-2 rounded-right" src="./img/iceberg.jpg" alt="Photo of an iceberg in the sea">
                         <div class="media-body">
-                            <h2 class="text-info mt-0 mb-2 subtitle">
-                                <a id="article1Title" href="./article.html">Global temperature record</a>
+                            <h2 class="text-info mt-0 mb-2">
+                                <a id="article1Title" class="subtitle" href="./article.html">Global temperature record</a>
                             </h2>
                             <p>
                                 The global surface temperature relative to 1951-1980 average recently published by NASA shows that 2016 ranks as the warmest

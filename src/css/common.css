@@ -27,6 +27,20 @@ body a:hover {
     font-weight: 400
 }
 
+.large {
+    font-size: 150% !important;
+}
+
+.skip-links {
+    position:absolute;
+    left:-1000px;
+    top:-1000px;
+    width:1px;
+    height:1px;
+    text-align: left;
+    overflow:hidden;
+}
+
 .header .logo {
     height: 3.5rem;
     width: 3.5rem
