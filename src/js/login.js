@@ -123,7 +123,7 @@ function register(event) {
     if (firstName.value.trim().length === 0) {
         setInvalid(firstName);
         firstName.nextElementSibling.innerHTML = 'First name cannot be empty.';
-        errorList.innerHTML += 'First name cannot be empty.';
+        errorList.innerHTML += `<li><a href="#register-first-name-control">First name cannot be empty.</a></li>`;
         hasError = true;
     } else if (firstName.validity.valid) {
         setValid(firstName);
@@ -134,7 +134,7 @@ function register(event) {
     if (lastName.value.trim().length === 0) {
         setInvalid(lastName);
         lastName.nextElementSibling.innerHTML = 'Last name cannot be empty.';
-        errorList.innerHTML = 'Last name cannot be empty.';
+        errorList.innerHTML += `<li><a href="#register-last-name-control">Last name cannot be empty.</a></li>`;
         hasError = true;
     } else if (lastName.validity.valid) {
         setValid(lastName);
@@ -147,13 +147,13 @@ function register(event) {
         email.nextElementSibling.innerHTML = ''
     } else if (email.validity.valueMissing) {
         setInvalid(email);
-        email.nextElementSibling.innerHTML = 'Email cannot be empty.'
-        errorList.innerHTML = 'Email cannot be empty.';
+        email.nextElementSibling.innerHTML = 'Email cannot be empty.';
+        errorList.innerHTML += `<li><a href="#register-email-control">Email cannot be empty.</a></li>`;
         hasError = true;
     } else {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Invalid email.'
-        errorList.innerHTML = 'Invalid email.';
+        errorList.innerHTML += `<li><a href="#register-email-control">Invalid email.</a></li>`;
         hasError = true;
     }
 
@@ -162,22 +162,22 @@ function register(event) {
     if (passwordValue.length < 8) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must be at least 8 characters.'
-        errorList.innerHTML = 'Password must be at least 8 characters.';
+        errorList.innerHTML += `<li><a href="#register-password-control">Password must be at least 8 characters.</a></li>`;
         hasError = true;
     } else if (passwordValue.length > 16) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must be less than 16 characters.'
-        errorList.innerHTML = 'Password must be less than 16 characters.';
+        errorList.innerHTML += `<li><a href="#register-password-control">Password must be less than 16 characters.</a></li>`;
         hasError = true;
     } else if (passwordValue.match(/[a-zA-Z]+/) == null) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must contain at least one letter.'
-        errorList.innerHTML = 'Password must contain at least one letter.';
+        errorList.innerHTML += `<li><a href="#register-password-control">Password must contain at least one letter.</a></li>`;
         hasError = true;
     } else if (passwordValue.match(/[0-9]+/) == null) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must contain at least one number.'
-        errorList.innerHTML = 'Password must contain at least one number.';
+        errorList.innerHTML += `<li><a href="#register-password-control">Password must contain at least one number.</a></li>`;
         hasError = true;
     } else {
         setValid(password);
@@ -188,12 +188,12 @@ function register(event) {
     if (programme.validity.valueMissing) {
         setInvalid(programme);
         programme.nextElementSibling.innerHTML = 'Programme cannot be empty.'
-        errorList.innerHTML = 'Programme cannot be empty.';
+        errorList.innerHTML += `<li><a href="#register-programme-control">Programme cannot be empty.</a></li>`;
         hasError = true;
     } else if (!programme.validity.valid) {
         setInvalid(programme);
         programme.nextElementSibling.innerHTML = 'Invalid programme.'
-        errorList.innerHTML = 'Invalid programme.';
+        errorList.innerHTML += `<li><a href="#register-programme-control">Invalid programme.</a></li>`;
         hasError = true;
     } else {
         setValid(programme);
@@ -201,6 +201,8 @@ function register(event) {
     }
 
     setGeneralErrorMessage('register-error', hasError);
+    location.href = "#register-error";
+
 }
 
 /**

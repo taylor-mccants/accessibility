@@ -213,8 +213,10 @@
             <section class="col-12 col-md-7 mt-4 register" aria-label="Register Form">
                 <fieldset class="p-4 bg-white">
                     <legend class="text-primary title">Create new account</legend>
+                    <div role="alert" aria-live="assertive">
                     <div class="text-danger mb-4 d-none subtitle" id="register-error" aria-live="assertive"></div>
-                    <ul class="sr-only" id="register-error-list"></ul>
+                        <ul class="sr-only" id="register-error-list"></ul>
+                    </div>
                     <form id="register-form" novalidate>
                         <fieldset class="form-group">
                             <legend class="form-label" id="register-basic-legend">Basic information
