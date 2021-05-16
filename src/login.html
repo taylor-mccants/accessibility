@@ -69,7 +69,7 @@
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40"
                          alt="Logo of the Lorem Ipsum Institute of Technology">
                 </div>
-                <button class="navbar-toggler"type="button"aria-label="Navbar"aria-haspopup="true"
+                <button class="navbar-toggler" type="button" aria-label="Navbar" aria-haspopup="true"
                         aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -174,8 +174,11 @@
             <section class="col-12 col-md-5 mt-4 login" aria-label="Login Form">
                 <fieldset class="p-4 mr-md-3 bg-white">
                     <legend class="text-primary title">Login</legend>
-                    <div class="text-danger mb-4 d-none subtitle" id="login-error" role="alert" aria-live="assertive"></div>
-                    <ul class="sr-only" id="login-error-list" role="alert" aria-live="assertive"></ul>
+                    <div role="alert" aria-live="assertive">
+                        <div class="text-danger mb-4 d-none subtitle" id="login-error" role="alert"
+                             aria-live="assertive"></div>
+                        <ul class="sr-only" id="login-error-list" role="alert" aria-live="assertive"></ul>
+                    </div>
                     <form id="login-form" novalidate>
                         <div class="form-group">
                             <label for="login-email-control">Email</label>
@@ -302,7 +305,8 @@
                 <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help">Help</a></li>
                 <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services">Terms of
                     service</a></li>
-                <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a></li>
+                <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a>
+                </li>
             </ul>
         </nav>
     </footer>
