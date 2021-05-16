@@ -119,7 +119,8 @@ in Chrome. We found that a button in the navigation bar did not have any value t
 there was no h1 tag but a h6 tag which we replaced. 
 After applying the changes to the code, we started with step two. We looked at the webpages with disabled CSS. We found, 
 that we forgot to apply the changes in the navigation to index and article
-page. We also discovered that the login link was not part of the navigation menu and that the link in the footer were not
+page. Another finding was an empty uneeded button, which we deleted.
+We also discovered that the login link was not part of the navigation menu and that the link in the footer were not
 represented as a navigation bar but as separate links. 
 In the third step, we used JAWS and navigated first through the original website to get a feeling how the navigation 
 works on an inaccessible website. Next, we navigated through website with our changes to the code. The first thing we
