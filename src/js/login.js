@@ -34,7 +34,8 @@ function login(event) {
     event.stopPropagation();
 
     var hasError = false;
-
+    var errorList = document.getElementById('login-error-list');
+    errorList.innerHTML = '';
     //TODO: Think of a better way than nextElementSibling.
     var email = document.getElementById('login-email-control');
     if (email.validity.valid) {
@@ -43,10 +44,12 @@ function login(event) {
     } else if (email.validity.valueMissing) {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Email cannot be empty.';
+        errorList.innerHTML += `<li>Email cannot be empty.</li>`
         hasError = true;
     } else {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Invalid email.';
+        errorList.innerHTML += `<li>Invalid email.</li>`
         hasError = true;
     }
 
@@ -54,12 +57,14 @@ function login(event) {
     if (password.value.trim().length === 0) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password cannot be empty.';
+        errorList.innerHTML += `<li>Password cannot be empty.</li>`
         hasError = true;
     } else {
         setValid(password);
         password.nextElementSibling.innerHTML = '';
     }
 
+    console.log(errorList.innerHTML);
     setGeneralErrorMessage('login-error', hasError);
 }
 
@@ -102,6 +107,8 @@ function register(event) {
     event.stopPropagation();
 
     var hasError = false;
+    var errorList = document.getElementById('register-error-list');
+    errorList.innerHTML = '';
 
     //TODO: Think of a better way than nextElementSibling.
 
@@ -109,6 +116,7 @@ function register(event) {
     if (firstName.value.trim().length === 0) {
         setInvalid(firstName);
         firstName.nextElementSibling.innerHTML = 'First name cannot be empty.';
+        errorList.innerHTML += 'First name cannot be empty.';
         hasError = true;
     } else if (firstName.validity.valid) {
         setValid(firstName);
@@ -119,6 +127,7 @@ function register(event) {
     if (lastName.value.trim().length === 0) {
         setInvalid(lastName);
         lastName.nextElementSibling.innerHTML = 'Last name cannot be empty.';
+        errorList.innerHTML = 'Last name cannot be empty.';
         hasError = true;
     } else if (lastName.validity.valid) {
         setValid(lastName);
@@ -132,10 +141,12 @@ function register(event) {
     } else if (email.validity.valueMissing) {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Email cannot be empty.'
+        errorList.innerHTML = 'Email cannot be empty.';
         hasError = true;
     } else {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Invalid email.'
+        errorList.innerHTML = 'Invalid email.';
         hasError = true;
     }
 
@@ -144,18 +155,22 @@ function register(event) {
     if (passwordValue.length < 8) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must be at least 8 characters.'
+        errorList.innerHTML = 'Password must be at least 8 characters.';
         hasError = true;
     } else if (passwordValue.length > 16) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must be less than 16 characters.'
+        errorList.innerHTML = 'Password must be less than 16 characters.';
         hasError = true;
     } else if (passwordValue.match(/[a-zA-Z]+/) == null) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must contain at least one letter.'
+        errorList.innerHTML = 'Password must contain at least one letter.';
         hasError = true;
     } else if (passwordValue.match(/[0-9]+/) == null) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password must contain at least one number.'
+        errorList.innerHTML = 'Password must contain at least one number.';
         hasError = true;
     } else {
         setValid(password);
@@ -166,10 +181,12 @@ function register(event) {
     if (programme.validity.valueMissing) {
         setInvalid(programme);
         programme.nextElementSibling.innerHTML = 'Programme cannot be empty.'
+        errorList.innerHTML = 'Programme cannot be empty.';
         hasError = true;
     } else if (!programme.validity.valid) {
         setInvalid(programme);
         programme.nextElementSibling.innerHTML = 'Invalid programme.'
+        errorList.innerHTML = 'Invalid programme.';
         hasError = true;
     } else {
         setValid(programme);
