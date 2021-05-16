@@ -26,7 +26,7 @@
     <script>
 
         var f = navigator.userAgent.search("Firefox");
-        console.log("UA: "+f)
+        console.log("UA: " + f)
 
         var $jq = jQuery.noConflict();
 
@@ -60,7 +60,7 @@
         });
         var zoomer = false;
 
-        window.onload =(function () {
+        window.onload = (function () {
             if (f > -1) {
                 $jq('#zoom').data('zoomer').setEnabled(zoomer);
             }
@@ -73,7 +73,7 @@
                 window.alert("Magnifier function currently only works in firefox, we're sorry!")
                 return
             }
-            if(zoomer)
+            if (zoomer)
                 $jq('#zoom').anythingZoomer('disable'); // disable AnythingZoomer
             else {
                 $jq('#zoom').anythingZoomer('enable');  // enable AnythingZoomer
@@ -87,16 +87,15 @@
 
 </head>
 
-<body class="d-flex flex-column az-wrap" style="overflow-x: hidden" >
+<body class="d-flex flex-column az-wrap" style="overflow-x: hidden">
 <div id="skip-links" class="skip-links" aria-hidden="false">
     <a href="#header"> Skip to header</a>
     <a href="#nav-bar-content"> Skip to navbar</a>
     <a href="#main"> Skip to main</a>
     <a href="#footer"> Skip to footer</a>
 </div>
-<div id="zoom"class="text">
+<div id="zoom" class="text">
 <div class="small">
-
     <header id="header" class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
@@ -145,7 +144,7 @@
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40"
                          alt="Logo of the Lorem Ipsum Institute of Technology">
                 </div>
-                <button class="navbar-toggler"type="button"aria-label="Navbar"aria-haspopup="true"
+                <button class="navbar-toggler" type="button" aria-label="Navbar" aria-haspopup="true"
                         aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -228,10 +227,12 @@
                 <div class="d-lg-none">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button role="button" class="btn btn-dark font-increase-button" id="font-increase-button-1"
+                            <button role="button" class="btn btn-dark font-increase-button"
+                                    id="font-increase-button-1"
                                     aria-label="Increase font size" onclick="changeFontSize(true)">A+
                             </button>
-                            <button role="button" class="btn btn-dark font-decrease-button" id="font-decrease-button-1"
+                            <button role="button" class="btn btn-dark font-decrease-button"
+                                    id="font-decrease-button-1"
                                     aria-label="Decrease font size" onclick="changeFontSize(false)">A-
                             </button>
                         </div>
@@ -245,19 +246,21 @@
         </div>
     </div>
 
-    <main class="container main" id="main" role="main">
+    <main class="container main" id="main" role="main" style="min-height: 100%">
         <div class="row no-gutters">
             <div class="col-12 col-lg-6">
                 <div class="p-4 mt-4 mr-lg-3 bg-white news">
                     <h1 class="text-primary mb-4 title">News &amp; events</h1>
                     <article class="media mt-4" aria-labelledby="article1Title">
-                        <img class="my-1 mr-2 rounded-right" src="./img/iceberg.jpg" alt="Photo of an iceberg in the sea">
+                        <img class="my-1 mr-2 rounded-right" src="./img/iceberg.jpg"
+                             alt="Photo of an iceberg in the sea">
                         <div class="media-body">
                             <h2 class="text-info mt-0 mb-2 subtitle">
                                 <a id="article1Title" href="./article.html">Global temperature record</a>
                             </h2>
                             <p>
-                                The global surface temperature relative to 1951-1980 average recently published by NASA shows that 2016 ranks as the warmest
+                                The global surface temperature relative to 1951-1980 average recently published by
+                                NASA shows that 2016 ranks as the warmest
                                 year on record.
                             </p>
                             <div class="my-3 text-secondary text-right">
@@ -266,13 +269,16 @@
                         </div>
                     </article>
                     <article class="media mt-4" aria-labelledby="article2Title">
-                        <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg" alt="Photo of the universe with many stars">
+                        <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg"
+                             alt="Photo of the universe with many stars">
                         <div class="media-body">
                             <h2 class="text-info mt-0 mb-2 subtitle">
-                                <a id="article2Title" href="./empty.html?title=Article">At iam decimum annum in spelunca iacet</a>
+                                <a id="article2Title" href="./empty.html?title=Article">At iam decimum annum in
+                                    spelunca iacet</a>
                             </h2>
                             <p>
-                                Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero satis. Claudii libidini, qui tum erat summo ne imperio,
+                                Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero satis. Claudii
+                                libidini, qui tum erat summo ne imperio,
                                 dederetur. Ergo id est convenienter naturae vivere, a natura discedere.
                             </p>
                             <div class="my-3 text-secondary text-right">
@@ -281,14 +287,18 @@
                         </div>
                     </article>
                     <article class="media mt-4" aria-labelledby="article3Title">
-                        <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg" alt="Picture of a small robo which has a head and arms moving on wheels">
+                        <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg"
+                             alt="Picture of a small robo which has a head and arms moving on wheels">
                         <div class="media-body">
                             <h2 class="text-info mt-0 mb-2 subtitle">
-                                <a id="article3Title" href="./empty.html?title=Article">Quo plebiscito decreta a senatu est consuli quaestio Cn</a>
+                                <a id="article3Title" href="./empty.html?title=Article">Quo plebiscito decreta a
+                                    senatu est consuli quaestio Cn</a>
                             </h2>
                             <p>
-                                Comprehensum, quod cognitum non habet? Quia nec honesto quic quam honestius nec turpi turpius. Maximeque eos videre possumus
-                                res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Est enim
+                                Comprehensum, quod cognitum non habet? Quia nec honesto quic quam honestius nec
+                                turpi turpius. Maximeque eos videre possumus
+                                res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Est
+                                enim
                                 effectrix multarum et magnarum voluptatum.
                             </p>
                             <div class="my-3 text-secondary text-right">
@@ -352,18 +362,20 @@
     </main>
 
 
-<footer id="footer" class="container-fluid bg-dark mt-4 footer" role="contentinfo">
-    <nav class="container text-center py-3">
-        <ul class="row justify-content-around list-unstyled mb-0">
-            <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a></li>
-            <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Contact+us">Contact us</a></li>
-            <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help">Help</a></li>
-            <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services">Terms of
-                service</a></li>
-            <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a></li>
-        </ul>
-    </nav>
-</footer>
+    <footer id="footer" class="container-fluid bg-dark mt-4 footer" role="contentinfo">
+        <nav class="container text-center py-3">
+            <ul class="row justify-content-around list-unstyled mb-0">
+                <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a></li>
+                <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Contact+us">Contact us</a>
+                </li>
+                <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help">Help</a></li>
+                <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services">Terms of
+                    service</a></li>
+                <li><a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy
+                    policy</a></li>
+            </ul>
+        </nav>
+    </footer>
 </div>
 </div>
 <script type="text/javascript" src="./js/jquery.js"></script>
