@@ -20,12 +20,10 @@ button, input, select, textarea {
 
 .accessibility-font {
     font-size: 1.25em;
-    font-size: 1.25rem
 }
 
 .accessibility-font button, .accessibility-font input, .accessibility-font select, .accessibility-font textarea {
     font-size: 1.041625em;
-    font-size: 1.04163rem
 }
 
 .accessibility-contrast {

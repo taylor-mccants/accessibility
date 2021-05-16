@@ -72,7 +72,7 @@ section {
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -330,7 +330,7 @@ legend {
     max-width: 100%;
     padding: 0;
     margin-bottom: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: inherit;
     color: inherit;
     white-space: normal
@@ -398,41 +398,41 @@ h6 {
 
 .h1,
 h1 {
-    font-size: 2.5rem
+    font-size: 2.5em
 }
 
 .h2,
 h2 {
-    font-size: 2rem
+    font-size: 2em
 }
 
 .h3,
 h3 {
-    font-size: 1.75rem
+    font-size: 1.75em
 }
 
 .h4,
 h4 {
-    font-size: 1.5rem
+    font-size: 1.5em
 }
 
 .h5,
 h5 {
-    font-size: 1.25rem
+    font-size: 1.25em
 }
 
 .h6,
 h6 {
-    font-size: 1rem
+    font-size: 1em
 }
 
 .lead {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-weight: 300
 }
 
 .display-1 {
-    font-size: 6rem
+    font-size: 6em
 }
 
 .display-1,
@@ -442,11 +442,11 @@ h6 {
 }
 
 .display-2 {
-    font-size: 5.5rem
+    font-size: 5.5em
 }
 
 .display-3 {
-    font-size: 4.5rem
+    font-size: 4.5em
 }
 
 .display-3,
@@ -456,7 +456,7 @@ h6 {
 }
 
 .display-4 {
-    font-size: 3.5rem
+    font-size: 3.5em
 }
 
 hr {
@@ -499,7 +499,7 @@ mark {
 
 .blockquote {
     margin-bottom: 1rem;
-    font-size: 1.25rem
+    font-size: 1.25em
 }
 
 .blockquote-footer {
@@ -1725,7 +1725,7 @@ pre code {
     display: block;
     width: 100%;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
@@ -1800,14 +1800,14 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
     padding-top: calc(.5rem + 1px);
     padding-bottom: calc(.5rem + 1px);
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.5
 }
 
 .col-form-label-sm {
     padding-top: calc(.25rem + 1px);
     padding-bottom: calc(.25rem + 1px);
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 1.5
 }
 
@@ -1846,7 +1846,7 @@ select.form-control:focus::-ms-value {
 .input-group-sm>.input-group-prepend>.btn,
 .input-group-sm>.input-group-prepend>.input-group-text {
     padding: .25rem .5rem;
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 1.5;
     border-radius: .2rem
 }
@@ -1867,7 +1867,7 @@ select.form-control-sm:not([size]):not([multiple]) {
 .input-group-lg>.input-group-prepend>.btn,
 .input-group-lg>.input-group-prepend>.input-group-text {
     padding: .5rem 1rem;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.5;
     border-radius: .3rem
 }
@@ -1953,7 +1953,7 @@ select.form-control-lg:not([size]):not([multiple]) {
     max-width: 100%;
     padding: .5rem;
     margin-top: .1rem;
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 1;
     color: #fff;
     background-color: rgba(40, 167, 69, .8);
@@ -2063,7 +2063,7 @@ select.form-control-lg:not([size]):not([multiple]) {
     max-width: 100%;
     padding: .5rem;
     margin-top: .1rem;
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 1;
     color: #fff;
     background-color: rgba(220, 53, 69, .8);
@@ -2223,7 +2223,7 @@ select.form-control-lg:not([size]):not([multiple]) {
     user-select: none;
     border: 1px solid transparent;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
@@ -2899,7 +2899,7 @@ fieldset:disabled a.btn {
 .btn-group-lg>.btn,
 .btn-lg {
     padding: .5rem 1rem;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.5;
     border-radius: .3rem
 }
@@ -2907,7 +2907,7 @@ fieldset:disabled a.btn {
 .btn-group-sm>.btn,
 .btn-sm {
     padding: .25rem .5rem;
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 1.5;
     border-radius: .2rem
 }
@@ -2991,7 +2991,7 @@ tbody.collapse.show {
     min-width: 10rem;
     padding: .5rem 0;
     margin: .125rem 0 0;
-    font-size: 1rem;
+    font-size: 1em;
     color: #212529;
     text-align: left;
     list-style: none;
@@ -3131,7 +3131,7 @@ tbody.collapse.show {
     display: block;
     padding: .5rem 1.5rem;
     margin-bottom: 0;
-    font-size: .875rem;
+    font-size: .875em;
     color: #6c757d;
     white-space: nowrap
 }
@@ -3362,7 +3362,7 @@ tbody.collapse.show {
     align-items: center;
     padding: .375rem .75rem;
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
@@ -3736,7 +3736,7 @@ tbody.collapse.show {
     padding-top: .3125rem;
     padding-bottom: .3125rem;
     margin-right: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: inherit;
     white-space: nowrap
 }
@@ -3778,7 +3778,7 @@ tbody.collapse.show {
 
 .navbar-toggler {
     padding: .25rem .75rem;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1;
     background-color: transparent;
     border: 1px solid transparent;
@@ -4430,7 +4430,7 @@ tbody.collapse.show {
 
 .pagination-lg .page-link {
     padding: .75rem 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.5
 }
 
@@ -4446,7 +4446,7 @@ tbody.collapse.show {
 
 .pagination-sm .page-link {
     padding: .25rem .5rem;
-    font-size: .875rem;
+    font-size: .875em;
     line-height: 1.5
 }
 
@@ -4755,7 +4755,7 @@ tbody.collapse.show {
     display: flex;
     height: 1rem;
     overflow: hidden;
-    font-size: .75rem;
+    font-size: .75em;
     background-color: #e9ecef;
     border-radius: .25rem
 }
@@ -5004,7 +5004,7 @@ tbody.collapse.show {
 
 .close {
     float: right;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 700;
     line-height: 1;
     color: #000;
@@ -5192,7 +5192,7 @@ button.close {
     word-spacing: normal;
     white-space: normal;
     line-break: auto;
-    font-size: .875rem;
+    font-size: .875em;
     word-wrap: break-word;
     opacity: 0
 }
@@ -5315,7 +5315,7 @@ button.close {
     word-spacing: normal;
     white-space: normal;
     line-break: auto;
-    font-size: .875rem;
+    font-size: .875em;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: padding-box;
@@ -5481,7 +5481,7 @@ button.close {
 .popover-header {
     padding: .5rem .75rem;
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 1em;
     color: inherit;
     background-color: #f7f7f7;
     border-bottom: 1px solid #ebebeb;

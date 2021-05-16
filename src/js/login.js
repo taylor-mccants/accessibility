@@ -44,12 +44,12 @@ function login(event) {
     } else if (email.validity.valueMissing) {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Email cannot be empty.';
-        errorList.innerHTML += `<li>Email cannot be empty.</li>`
+        errorList.innerHTML += `<li><a href="#login-email-control">Email cannot be empty.</a></li>`
         hasError = true;
     } else {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Invalid email.';
-        errorList.innerHTML += `<li>Invalid email.</li>`
+        errorList.innerHTML += `<li><a href="#login-email-control">Invalid email.</a></li>`
         hasError = true;
     }
 
@@ -57,7 +57,7 @@ function login(event) {
     if (password.value.trim().length === 0) {
         setInvalid(password);
         password.nextElementSibling.innerHTML = 'Password cannot be empty.';
-        errorList.innerHTML += `<li>Password cannot be empty.</li>`
+        errorList.innerHTML += `<li><a href="#login-password-control">Password cannot be empty.</a></li>`
         hasError = true;
     } else {
         setValid(password);
@@ -77,6 +77,8 @@ function forgot(event) {
     event.stopPropagation();
 
     var hasError = false;
+    var errorList = document.getElementById('login-error-list');
+    errorList.innerHTML = '';
 
     //TODO: Think of a better way than nextElementSibling.
     var email = document.getElementById('login-email-control');
@@ -86,9 +88,12 @@ function forgot(event) {
     } else if (email.validity.valueMissing) {
         setInvalid(email);
         email.nextElementSibling.innerHTML = 'Email cannot be empty.';
+        errorList.innerHTML += `<li><a href="#login-email-control">Email cannot be empty.</a></li>`
         hasError = true;
     } else {
         setInvalid(email);
+        email.nextElementSibling.innerHTML = 'Invalid email.';
+        errorList.innerHTML += `<li><a href="#login-email-control">Invalid email.</a></li>`
         hasError = true;
     }
 
@@ -96,6 +101,7 @@ function forgot(event) {
     removeValidation(password);
 
     setGeneralErrorMessage('login-error', hasError);
+    document.getElementById('login-error').focus();
 }
 
 /**

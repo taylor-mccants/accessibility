@@ -1,5 +1,5 @@
 html {
-    font-size: 1rem
+    font-size: 1em
 }
 
 body,
@@ -18,12 +18,12 @@ body a:hover {
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: 100
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 400
 }
 
@@ -47,18 +47,18 @@ body a:hover {
 }
 
 .header .title {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 1.8rem
 }
 
 .header .font-increase-button,
 .nav .font-increase-button {
-    font-size: 1rem
+    font-size: 1em
 }
 
 .header .font-decrease-button,
 .nav .font-decrease-button {
-    font-size: 1rem
+    font-size: 1em
 }
 
 .footer,
