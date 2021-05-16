@@ -66,6 +66,7 @@ function login(event) {
 
     console.log(errorList.innerHTML);
     setGeneralErrorMessage('login-error', hasError);
+    focusElement(document.getElementById('login-error'));
 }
 
 /**
@@ -101,7 +102,7 @@ function forgot(event) {
     removeValidation(password);
 
     setGeneralErrorMessage('login-error', hasError);
-    document.getElementById('login-error').focus();
+    focusElement(document.getElementById('login-error'));
 }
 
 /**
