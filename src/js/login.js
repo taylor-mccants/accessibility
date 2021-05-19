@@ -36,7 +36,6 @@ function login(event) {
     var hasError = false;
     var errorList = document.getElementById('login-error-list');
     errorList.innerHTML = '';
-    //TODO: Think of a better way than nextElementSibling.
     var email = document.getElementById('login-email-control');
     if (email.validity.valid) {
         setValid(email);
@@ -81,7 +80,6 @@ function forgot(event) {
     var errorList = document.getElementById('login-error-list');
     errorList.innerHTML = '';
 
-    //TODO: Think of a better way than nextElementSibling.
     var email = document.getElementById('login-email-control');
     if (email.validity.valid) {
         setValid(email);
@@ -117,7 +115,6 @@ function register(event) {
     var errorList = document.getElementById('register-error-list');
     errorList.innerHTML = '';
 
-    //TODO: Think of a better way than nextElementSibling.
 
     var firstName = document.getElementById('register-first-name-control');
     if (firstName.value.trim().length === 0) {
@@ -212,7 +209,6 @@ function register(event) {
 function focusElement(event) {
     event.preventDefault();
     event.stopPropagation();
-    //TODO: This is risky because if the html order changes, this is effected.
     event.target.previousElementSibling.focus()
 }
 
