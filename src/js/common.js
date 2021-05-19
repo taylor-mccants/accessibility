@@ -51,6 +51,44 @@ function openMenu(event) {
 }
 
 /**
+ * Handle Escape and Tab press
+ */
+function keyPressMenu(e) {
+
+    console.log('key pressed is: ', e.key, ' or ', e.keyCode);
+
+    var dropDowns = document.querySelectorAll('#nav-bar-content .dropdown');
+    var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+    // ESCAPE PRESS
+    if (e.key === 'Escape' || e.key==='Esc' || e.keyCode === 27) {
+        // Closes all menu dropdowns
+        for (var j = 0; j < dropDownMenus.length; j++) {
+            dropDownMenus[j].classList.remove('show');
+            dropDowns[j].ariaExpanded = false;
+        }
+    }
+    // TAB PRESS
+    else if (e.keyCode === 9 || e.key === 'Tab') {
+        // Finds open menu and checks if it is the same as the event
+        for (var k = 0; k < dropDownMenus.length; k++) {
+            if (dropDownMenus[k].classList.contains('show')) {
+                //if target was the last dropdown item, then collapse menu
+                var dropDownItems = dropDownMenus[k].querySelectorAll('.dropdown-item')
+                if (e.target === dropDownItems[dropDownItems.length -1]) {
+                    dropDownMenus[k].classList.remove('show');
+                    dropDowns[k].ariaExpanded = false;
+                }
+            }
+        }
+    }
+    // SPACEBAR PRESS
+    else if (e.keyCode === 32) {
+        console.log(e.target)
+        e.target.click()
+    }
+}
+
+/**
  * Toggle the navigation content
  * @param {object} event - The DOM event
  */
@@ -79,6 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (var i = 0; i < dropDownToggles.length; i++) {
         dropDownToggles[i].addEventListener('click', openMenu, false);
+        dropDownToggles[i].addEventListener('keydown', keyPressMenu, false);
+        }
+
+    var dropDowns = document.querySelectorAll('#nav-bar-content .dropdown');
+    var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+    for (var j = 0; j < dropDowns.length; j++) {
+        dropDowns[j].addEventListener('keydown', keyPressMenu, false);
+        dropDownMenus[j].addEventListener('keydown', keyPressMenu, false);
     }
 
     document.querySelector('.navbar-toggler')
