@@ -8,7 +8,7 @@ function changeFontSize(increase) {
     if (body.style.fontSize !=='')
         var size = parseFloat(body.style.fontSize);
 
-    window.console.log("fun " +size)
+    //window.console.log("fun " +size)
 
     var fontIncreaseBtn = document.getElementById("font-increase-button");
     var fontDecreaseBtn = document.getElementById("font-decrease-button");
