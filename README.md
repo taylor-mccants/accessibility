@@ -28,7 +28,7 @@ Another major issue we noticed with the website was the contrast of the text to 
 
 ### Website Without CSS 
 
-The first thing we noticed when we turned off the CSS styling of the webpage was that the buttons for increase/decrease font size appear twice. After some browsing, we realized that the second versions of the buttons were for the mobile version of the page. Another issue with the pages was that the navigation was handled with simple individual links and it was not clear which links belong to a submenu. So, we knew we had to change the navigation to lists in order to make the webpage more accessible. The footer also consisted simply out of unspecified <div> tags with links which we wanted to put into a list for a better navigation. Another major issue, which became visible by turning of the CSS styling was that heading tags were not used correctly or not used at all. An example would be the headings for the different articles on the index.html page. 
+The first thing we noticed when we turned off the CSS styling of the webpage was that the buttons for increase/decrease font size appear twice. After some browsing, we realized that the second versions of the buttons were for the mobile version of the page. Another issue with the pages was that the navigation was handled with simple individual links and it was not clear which links belong to a submenu. So, we knew we had to change the navigation to lists in order to make the webpage more accessible. The footer also consisted simply out of unspecified div tags with links which we wanted to put into a list for a better navigation. Another major issue, which became visible by turning of the CSS styling was that heading tags were not used correctly or not used at all. An example would be the headings for the different articles on the index.html page. 
 
 In the login form, the email label for the email input field was after the actual input field making it very confusing and hard for a user who is visually impaired to fill in the form. The same applied to the password label.  
 
@@ -58,15 +58,15 @@ One of the most counter intuitive parts of the site was found in the Login page.
 
 ### Headings 
 
-The original website was filled with <div> tags. There were very few identifying tags that could aid accessibility. Specifically, there were clear headers in the article based on font size and weight, so we replaced many of the <div> tags with proper header tags. On the homepage, the section titles “News & Events”, “Studies”, and “Researches” were the top titles and therefore given the <h1> tags. The next level, <h2> was given to the article titles and navigation headers. There were only a few other headers in the other pages, but much less hierarchy than in the homepage. 
+The original website was filled with div tags. There were very few identifying tags that could aid accessibility. Specifically, there were clear headers in the article based on font size and weight, so we replaced many of the div tags with proper header tags. On the homepage, the section titles “News & Events”, “Studies”, and “Researches” were the top titles and therefore given the h1 tags. The next level, h2 was given to the article titles and navigation headers. There were only a few other headers in the other pages, but much less hierarchy than in the homepage. 
 
 ### Articles and their titles 
 
-The article tiles begin with an image and then show a title and description. We surrounded the tile with an <article> tag to make it more obvious what it represents. In addition, we added an attribute for “aria-labelledby” to connect the entire tile with the title of each article. This makes it clearer when using a screen reader what that tile represents before listening to the entire description. 
+The article tiles begin with an image and then show a title and description. We surrounded the tile with an article tag to make it more obvious what it represents. In addition, we added an attribute for “aria-labelledby” to connect the entire tile with the title of each article. This makes it clearer when using a screen reader what that tile represents before listening to the entire description. 
 
 ### Menu structure 
 
-Originally, the navigation menu was not well organized. We adjusted this to give it a <nav> tag and put each of the menu options into a list of anchor tags. It is now made up of nav-items and nav-links with dropdown-menus and dropdown-items. The placement of the navigation bar is also important to be in a commonly expectation location such as horizontally along the top. 
+Originally, the navigation menu was not well organized. We adjusted this to give it a nav tag and put each of the menu options into a list of anchor tags. It is now made up of nav-items and nav-links with dropdown-menus and dropdown-items. The placement of the navigation bar is also important to be in a commonly expectation location such as horizontally along the top. 
 
 In addition to the top navigation including Homepage, etc, the “Studies” and “Researches” sections, as well as the footer, were similar in a sense that they are comprised of links in a navigation manner. Therefore, we also structured them as a list of anchor tags. 
 
@@ -90,7 +90,7 @@ In order to improve the screen reader experience, we added label tags to all of 
 
 ### Related control grouping 
 
-In order to more easily understand the sections of the forms, we grouped some of them using <fieldset> and <legend> tags. Within the register form we grouped the basic information separately from the additional information. In addition, we grouped the forms themselves as Login and Register because it looked more obvious when CSS was disabled. 
+In order to more easily understand the sections of the forms, we grouped some of them using fieldset and legend tags. Within the register form we grouped the basic information separately from the additional information. In addition, we grouped the forms themselves as Login and Register because it looked more obvious when CSS was disabled. 
 
 ### Form control instructions 
 
@@ -112,13 +112,13 @@ In the article.html, we found a complex image which shows the average temperatur
 
 ## Exercise 6 – Accessible tables 
 
-In the original code, header cells and data cells did not have the correct html tags. So, we changed the tags for header cells to the <th> tag and for data cells to the <td> tag. As the table consist of row and column headers, we added the scope attribute to signify whether a header applies to a row or column. Furthermore, for headers which span multiple columns resp. rows, we set the scope attribute to colgroup resp. rowgroup. 
+In the original code, header cells and data cells did not have the correct html tags. So, we changed the tags for header cells to the th tag and for data cells to the td tag. As the table consist of row and column headers, we added the scope attribute to signify whether a header applies to a row or column. Furthermore, for headers which span multiple columns resp. rows, we set the scope attribute to colgroup resp. rowgroup. 
 
 ## Exercise 7 – Accessibility test 
 
 For testing accessibility, we used a three-step testing approach. First, we started to look at webpages with the Wave plugin in Chrome. We found that a button in the navigation bar did not have any value text. We also found that on the empty page there was no h1 tag but a h6 tag which we replaced.  
 
-After applying the changes to the code, we started with step two. We looked at the webpages with disabled CSS. We found that we had only applied navigation improvements to one of the pages and needed to make the same update on the remaining pages. Another finding was a button, which is only used in a mobile version of the page. We also discovered that the login link was not part of the navigation menu and that the link in the footer were not represented as a navigation bar but as separate links. We checked that the login button was inside of the <nav> tag, however we chose not to move it inside the existing navigation link because we wanted to leave it styled to the right side. We changed the footer to a navigation bar since it serves a similar purpose as the main navigation bar, and this makes the footer more accessible.  
+After applying the changes to the code, we started with step two. We looked at the webpages with disabled CSS. We found that we had only applied navigation improvements to one of the pages and needed to make the same update on the remaining pages. Another finding was a button, which is only used in a mobile version of the page. We also discovered that the login link was not part of the navigation menu and that the link in the footer were not represented as a navigation bar but as separate links. We checked that the login button was inside of the nav tag, however we chose not to move it inside the existing navigation link because we wanted to leave it styled to the right side. We changed the footer to a navigation bar since it serves a similar purpose as the main navigation bar, and this makes the footer more accessible.  
 
 In the third step, we used JAWS and navigated first through the original website to get a feeling of how the navigation works on an inaccessible website. Next, we navigated through website with our changes to the code. The first thing we noticed was that it is very difficult for us, having full sight abilities, to just use the keyboard and listen to screen reader for navigation, as we already have additional visual information and prior knowledge of the website. Another challenge was to figure out what JAWS should read out loud and what was normal for it to ignore. These conditions made it challenging for us to test the website with JAWS. However, with practice we improved our tabbing and understanding and were able to judge our website to the best of our abilities. 
 
